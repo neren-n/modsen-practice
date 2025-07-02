@@ -11,10 +11,10 @@ Examples
 function toCamelCase(str){
     if(!str) return "";
 
-    const word = str.split(/[-_]/);//разбиваем на массив
-    let word2=word.map(upperFirst);//применяем upperFirst к каждом уэлементу массива
-    word2=word2.join('');//соеденяем массив в стоку
-    return word2;
+    const words = str.split(/[-_]/);//разбиваем на массив
+    let word=words.map(upperFirst);//применяем upperFirst к каждом уэлементу массива
+    word=word.join('');//соеденяем массив в стоку
+    return word;
 }
 function upperFirst(word){
     if(!word) return"";
