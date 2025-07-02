@@ -12,8 +12,12 @@ function toCamelCase(str){
     if(!str) return "";
 
     const words = str.split(/[-_]/);//разбиваем на массив
-    let word=words.map(upperFirst);//применяем upperFirst к каждом уэлементу массива
-    word=word.join('');//соеденяем массив в стоку
+   for(let i=0;i<words.length;i++){
+     if(i != 0){
+        words[i]= upperFirst(words[i]);
+     }
+   }
+    let word=words.join('');//соеденяем массив в стоку
     return word;
 }
 function upperFirst(word){
